@@ -33,16 +33,28 @@
         "singleQuote": true,
         "trailingComma": "es5"
     },
-    "name": "ms-progress-demo",
-    "author": "ankomahene",
-    "module": "dist/ms-progress-demo.esm.js",
+    "name": "ms-react-progress-bar",
+    "author": "Shadrack Ankomahene",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Ankomahene/ms-react-progress-bar.git"
+    },
+    "homepage": "https://github.com/Ankomahene/ms-react-progress-bar",
+    "keywords": [
+        "react",
+        "progress",
+        "progress bar",
+        "loader",
+        "loading"
+    ],
+    "module": "dist/ms-react-progress.esm.js",
     "size-limit": [
         {
-            "path": "dist/ms-progress-demo.cjs.production.min.js",
+            "path": "dist/ms-react-progress.cjs.production.min.js",
             "limit": "10 KB"
         },
         {
-            "path": "dist/ms-progress-demo.esm.js",
+            "path": "dist/ms-react-progress.esm.js",
             "limit": "10 KB"
         }
     ],
