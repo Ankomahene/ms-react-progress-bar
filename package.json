@@ -1,11 +1,12 @@
 {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
+    "description": "Standalone React Progress Bar Component",
     "files": [
         "dist",
-        "src"
+        "styles"
     ],
     "engines": {
         "node": ">=10"
