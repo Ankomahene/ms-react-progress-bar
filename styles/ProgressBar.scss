@@ -1,18 +1,19 @@
-.ms-progress-wrapper_A043BXZ .ms-progress-container_XH4B78M {
+.ms-progress-wrapper_A043BXZ {
+  .ms-progress-container_XH4B78M {
     position: relative;
     background-color: antiquewhite;
     padding: 2px;
     margin: 10px;
-    width: calc(100% -24px);
-}
+    width: calc(100% - 24px);
+  }
 
-.ms-progress-wrapper_A043BXZ .ms-progress-bar_NMK78H2 {
+  .ms-progress-bar_NMK78H2 {
     height: 100%;
-    transition: width .8s;
+    transition: width 0.8s;
     background-size: 200% 200%;
   }
 
-  .ms-progress-wrapper_A043BXZ .ms-progress-label_97NH7CX {
+  .ms-progress-label_97NH7CX {
     height: 100%;
     width: 90%;
     font-weight: bold;
@@ -21,10 +22,11 @@
     background: transparent !important;
     margin: auto;
     padding: 0 5px;
+  }
 }
 
 @keyframes moveBG {
-    100% {
-      background-position: 100% 100%;
-    }
+  100% {
+    background-position: 100% 100%;
   }
+}

@@ -5,7 +5,6 @@ import {
   getPercentageValue,
 } from "../../functions/functions";
 import { getProgressBarStyles } from "../../functions/styles";
-import "../../styles/ProgressBar.css";
 
 export const ProgressBar = ({ value, options }: IProgressBarProps) => {
   const progressBarOptions: IProgressOptions = {

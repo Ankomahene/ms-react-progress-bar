@@ -8,6 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "ms-react-progress-bar": "^1.0.1",
     "react-app-polyfill": "^1.0.0"
   },
   "alias": {
