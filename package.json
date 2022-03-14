@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.2",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -11,16 +11,22 @@
         "node": ">=10"
     },
     "scripts": {
-        "start": "tsdx watch",
-        "build": "tsdx build",
+        "start": "cd example && npm run start",
+        "watch": "tsdx watch",
+        "build": "npm run prepare",
         "test": "tsdx test --passWithNoTests",
         "lint": "tsdx lint",
-        "prepare": "tsdx build",
+        "prepare": "tsdx build && npm run style",
         "size": "size-limit",
-        "analyze": "size-limit --why"
+        "analyze": "size-limit --why",
+        "sass": "sass styles/ProgressBar.scss dist/ProgressBar.css",
+        "cssnano": "cssnano dist/ProgressBar.css dist/ProgressBar.min.css --no-zindex --no-reduceIdents",
+        "style-injector": "style2js --out-dir dist dist/ProgressBar.min.css",
+        "style": "npm run sass && npm run cssnano && npm run style-injector"
     },
     "peerDependencies": {
-        "react": "^17.0.2"
+        "react": ">=17",
+        "react-dom": ">=17"
     },
     "husky": {
         "hooks": {
@@ -34,10 +40,10 @@
         "trailingComma": "es5"
     },
     "name": "ms-react-progress-bar",
-    "author": "Shadrack Ankomahene",
+    "author": "Shadrack Ankomahene  <ankomaheneshadrack@gmail.com> (https://mistershadrack.com)",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Ankomahene/ms-react-progress-bar.git"
+        "url": "git+https://github.com/Ankomahene/ms-react-progress-bar.git"
     },
     "homepage": "https://github.com/Ankomahene/ms-react-progress-bar",
     "keywords": [
@@ -47,14 +53,14 @@
         "loader",
         "loading"
     ],
-    "module": "dist/ms-react-progress.esm.js",
+    "module": "dist/ms-react-progress-bar.esm.js",
     "size-limit": [
         {
-            "path": "dist/ms-react-progress.cjs.production.min.js",
+            "path": "dist/ms-react-progress-bar.cjs.production.min.js",
             "limit": "10 KB"
         },
         {
-            "path": "dist/ms-react-progress.esm.js",
+            "path": "dist/ms-react-progress-bar.esm.js",
             "limit": "10 KB"
         }
     ],
@@ -62,11 +68,17 @@
         "@size-limit/preset-small-lib": "^7.0.8",
         "@types/react": "^17.0.40",
         "@types/react-dom": "^17.0.13",
+        "autoprefixer": "^10.4.2",
+        "cssnano": "^5.1.3",
         "husky": "^7.0.4",
+        "postcss": "^8.4.8",
+        "postcss-cli": "^9.1.0",
         "react": "*",
         "react-dom": "^17.0.2",
         "rollup-plugin-postcss": "^4.0.2",
+        "sass": "^1.49.9",
         "size-limit": "^7.0.8",
+        "style2js": "^1.0.0",
         "tsdx": "^0.14.1",
         "tslib": "^2.3.1",
         "typescript": "^3.9.10"
