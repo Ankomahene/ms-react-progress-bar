@@ -1,9 +1,9 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
-    "description": "Standalone React Progress Bar Component",
+    "description": "Simple React Progress Bar Component",
     "files": [
         "dist",
         "styles"
@@ -46,7 +46,7 @@
         "type": "git",
         "url": "git+https://github.com/Ankomahene/ms-react-progress-bar.git"
     },
-    "homepage": "https://github.com/Ankomahene/ms-react-progress-bar",
+    "homepage": "https://ankomahene.github.io/ms_react-progress-bar/",
     "keywords": [
         "react",
         "progress",
