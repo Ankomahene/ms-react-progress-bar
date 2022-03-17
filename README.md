@@ -64,33 +64,35 @@ $ yarn add ms-react-progress-bar
 
 ## Demo
 
-[coming soon](#)
+[Examples](https://ankomahene.github.io/ms_react-progress-bar/)
 
 ## Documentation
 
-[coming soon](#)
+[Getting Started Guide](https://ankomahene.github.io/ms_react-progress-bar/)
+
+## Props
+| Props      | Description                                      | Default  |
+| :---       |    :----                                         | :---     |
+| value      | Number in percentage showing current progress    | 0        |
+| options    | Progress Bar Options to help you customize       | 0        |
 
 ## Options
-| Option      | Description | Default       |
-| :---       |    :----   |          :--- |
-| type: regular, striped      | Specify the type of progress bar       | regular   |
-| value: number   | Number in percentage showing current progress        | 0      |
-| maxValue: number   | Maximun value in percentage showing end of progress        | 100      |
-| height: string   | Height of Progress Bar       | 15px      |
-|borderRadius: string | The border radius of your progress Bar | 10px |
-|barColor: string, hex color | The color of the inner bar which show the current progrss | #2c43ac |
-|stripeAnimation: boolean | toggle striped animation on and off. should set type as "striped" | false |
-|stripeAnimationDuration: string | duration of stripe animation in seconds | 10s |
-|containerStyle: bg, border, none  | style of the outer container | bg |
-|containerColor: string | color of the outer container | #dddddd |
-|labelAlignment: left, center, right  | The alignment of the label | left |
-|labelSize: string | font size of label | 12px |
-|labelVisibility: boolean | toggle label on or off | true |
-|labelColor: string | text color of label | white |
-|customLabel: string | add your own custom label | '' | 
-
-
-
+| Option         | Description                                                         | Default        |
+| :---           |    :----                                                            | :---           |
+|type            |	Specify the type of progress bar. you can choose between regular, striped | regular |
+|maxValue        |	Maximum value in percentage showing end of progress. (number)      | 100            |
+|height          |	Height of Progress Bar in px	                                     | 15px           |
+|borderRadius    |	The border radius of progress Bar in px	                           | 10px           |
+|barColor        |	The hex color of the inner bar which show the current progress	   | #2c43ac        |
+|stripeAnimation |	Toggle striped animation on and off. should set type as "striped"	 | false          |
+|stripeAnimationDuration |	Duration of stripe animation in seconds	                   | 10s            |
+|containerStyle  |	Style of the outer container you can choose between bg,border,none | bg             |
+|containerColor  |	Color of the outer container	                                     | #dddddd        |
+|labelAlignment  |	The alignment of the label choose between left, center, right	     | left           |
+|labelSize       |	Font size of label	                                               | 12px           |
+|labelVisibility |	Toggle label on or off	                                           | true           |
+|labelColor      |	Color of label	                                                   | white          |
+|customLabel     |	Add your own custom label                                          |	              |
 
 
 ## License
