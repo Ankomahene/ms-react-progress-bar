@@ -1,14 +1,16 @@
 # MS REACT PROGRESS BAR
 
 🎉 Standalone Customizable React Progress bar
+![NPM Downloads](https://img.shields.io/npm/dw/:ms-react-progress-bar)
+![NPM License](https://img.shields.io/npm/l/:ms-react-progress-bar)
 
 ![ms-react-progress](https://user-images.githubusercontent.com/40831389/158510180-fd318ed2-62a9-438e-85d2-1866221a1e34.gif)
 
 ## Installation
 
-```
-$ npm install --save ms-react-progress-bar
-$ yarn add ms-react-progress-bar
+```bash
+npm install --save ms-react-progress-bar
+yarn add ms-react-progress-bar
 ```
 
 ## Features
@@ -36,7 +38,9 @@ $ yarn add ms-react-progress-bar
     );
   }
 ```
+
 ## Adding Options
+
 ```jsx
   import React from 'react';
   import { ProgressBar } from 'ms-react-progress-bar';
@@ -71,12 +75,14 @@ $ yarn add ms-react-progress-bar
 [Getting Started Guide](https://ankomahene.github.io/ms_react-progress-bar/)
 
 ## Props
+
 | Props      | Description                                      | Default  |
 | :---       |    :----                                         | :---     |
 | value      | Number in percentage showing current progress    | 0        |
 | options    | Progress Bar Options to help you customize       | 0        |
 
 ## Options
+
 | Option         | Description                                                         | Default        |
 | :---           |    :----                                                            | :---           |
 |type            |	Specify the type of progress bar. you can choose between regular, striped | regular |
