@@ -2,26 +2,29 @@
   .ms-progress-container_XH4B78M {
     position: relative;
     background-color: antiquewhite;
-    padding: 2px;
+    padding: 3px;
     margin: 10px;
     width: calc(100% - 24px);
   }
 
   .ms-progress-bar_NMK78H2 {
     height: 100%;
-    transition: width 0.8s;
+    transition: width 0.5s;
     background-size: 200% 200%;
+    position: relative;
   }
 
   .ms-progress-label_97NH7CX {
-    height: 100%;
-    width: 90%;
+    width: 98%;
     font-weight: bold;
     display: flex;
     align-items: center;
     background: transparent !important;
     margin: auto;
     padding: 0 5px;
+    box-sizing: border-box;
+    transition: width 0.5s;
+    position: absolute;
   }
 }
 
