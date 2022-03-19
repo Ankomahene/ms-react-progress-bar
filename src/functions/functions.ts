@@ -21,8 +21,8 @@ export const getProgressBackgroundStyle = (
   if (barColor.startsWith("#")) {
     return backgroundType === "striped"
       ? {
-          backgroundImage: `repeating-linear-gradient( 135deg, ${barColor}66, ${barColor}66 5px, ${barColor} 5px, ${barColor} 10px)`,
-        }
+        backgroundImage: `repeating-linear-gradient( 135deg, ${barColor}66, ${barColor}66 5px, ${barColor} 5px, ${barColor} 10px)`,
+      }
       : { background: barColor };
   }
   return { background: barColor };
@@ -43,4 +43,6 @@ export const getDefaultOptions = (): IProgressOptions => ({
   borderRadius: "10px",
   stripeAnimation: false,
   stripeAnimationDuration: "10s",
+  labelPosition: 'center',
+  showMaxValue: false,
 });

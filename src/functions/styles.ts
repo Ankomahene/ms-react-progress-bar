@@ -18,6 +18,8 @@ export const getProgressBarStyles = (
     borderRadius,
     stripeAnimation,
     stripeAnimationDuration,
+    labelPosition,
+    showMaxValue
   } = progressOptions;
 
   return {
@@ -27,12 +29,14 @@ export const getProgressBarStyles = (
       border:
         containerStyle === "border" ? `2px solid ${containerColor}` : "none",
       borderRadius,
+      marginTop: labelPosition === "top" ? "20px" : "5px",
+      marginBottom: labelPosition === "bottom" ? "20px" : "5px",
     },
     progressBarStyles: {
       ...getProgressBackgroundStyle(type!, barColor!),
       width:
-        percentageValue === 0
-          ? "0px"
+        percentageValue <= 0
+          ? "0%"
           : `${percentageValue > 100 ? 100 : percentageValue}%`,
       borderRadius,
       animation: stripeAnimation
@@ -44,8 +48,11 @@ export const getProgressBarStyles = (
       justifyContent: getLabelAlignment(labelAlignment!),
       fontSize: labelSize,
       display: !labelVisibility ? "none" : "flex",
-      width: percentageValue === 0 ? "20px" : "95%",
+      minWidth: showMaxValue ? "70px" : "30px",
       borderRadius,
+      top: labelPosition === "top" ? "-20px" : "",
+      bottom: labelPosition === "bottom" ? "-20px" : "",
+      height: labelPosition === "center" ? "100%" : ""
     },
   };
 };
