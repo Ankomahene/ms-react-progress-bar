@@ -1,5 +1,5 @@
-export type AlignmentType = "left" | "right" | "center";
-export type BackgroundType = "regular" | "striped";
+export type AlignmentType = 'left' | 'right' | 'center';
+export type BackgroundType = 'regular' | 'striped';
 export type LabelPosition = 'top' | 'center' | 'bottom';
 export type ContainerStyle = 'bg' | 'border' | 'none';
 
