@@ -11,7 +11,7 @@ export const ProgressBar = ({ value, options }: IProgressBarProps) => {
     ...getDefaultOptions(),
     ...options,
   };
-  const { maxValue, customLabel } = progressBarOptions;
+  const { maxValue, showMaxValue, customLabel } = progressBarOptions;
   const percentageValue: number = getPercentageValue(value, maxValue!);
   const styles = getProgressBarStyles(progressBarOptions, percentageValue);
 
@@ -24,7 +24,13 @@ export const ProgressBar = ({ value, options }: IProgressBarProps) => {
           <div className="ms-progress-label_97NH7CX" style={labelStyles}>
             {!!customLabel
               ? customLabel
-              : `${isNaN(value) ? 0 : value > maxValue! ? maxValue : value}%`}
+              : `${
+                  isNaN(value) || Number(value) < 0
+                    ? 0
+                    : value > maxValue!
+                    ? maxValue
+                    : value
+                }${showMaxValue ? ` / ${maxValue}` : ''}%`}
           </div>
         </div>
       </div>
