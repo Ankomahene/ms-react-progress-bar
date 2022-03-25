@@ -1,11 +1,14 @@
 # MS REACT PROGRESS BAR
 
-🎉 Standalone Customizable React Progress bar
-#
+###
 ![npm](https://img.shields.io/npm/dw/ms-react-progress-bar?color=%236b46c1&style=for-the-badge)
 ![NPM](https://img.shields.io/npm/l/ms-react-progress-bar?color=%236b46c1&style=for-the-badge)
 ![npm](https://img.shields.io/npm/v/ms-react-progress-bar?color=%236b46c1&label=LATEST%20VERSION&style=for-the-badge)
-#
+###
+[![MS React Progress Bar CI](https://github.com/Ankomahene/ms-react-progress-bar/actions/workflows/main.yml/badge.svg)](https://github.com/Ankomahene/ms-react-progress-bar/actions/workflows/main.yml)
+###
+🎉 Standalone Customizable React Progress bar
+###
 ![ms-react-progress](https://user-images.githubusercontent.com/40831389/158510180-fd318ed2-62a9-438e-85d2-1866221a1e34.gif)
 
 ## Installation
