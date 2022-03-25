@@ -1,5 +1,5 @@
 {
-    "version": "1.1.1",
+    "version": "1.1.2",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -16,12 +16,14 @@
         "watch": "tsdx watch",
         "build": "npm run prepare",
         "test": "tsdx test --passWithNoTests",
-        "lint": "tsdx lint",
+        "lint": "tsdx lint src test",
+        "test-coverage": "tsdx test --coverage",
+        "watch-test-coverage": "tsdx test --watch --coverage",
         "lint-fix": "npm run lint -- --fix",
         "prepare": "tsdx build && npm run style",
         "size": "size-limit",
         "analyze": "size-limit --why",
-        "sass": "sass styles/ProgressBar.scss dist/ProgressBar.css",
+        "sass": "sass scss/ProgressBar.scss dist/ProgressBar.css",
         "cssnano": "cssnano dist/ProgressBar.css dist/ProgressBar.min.css --no-zindex --no-reduceIdents",
         "style-injector": "style2js --out-dir dist dist/ProgressBar.min.css",
         "style": "npm run sass && npm run cssnano && npm run style-injector"
@@ -36,18 +38,27 @@
         }
     },
     "prettier": {
-        "printWidth": 80,
+        "printWidth": 120,
         "semi": true,
         "singleQuote": true,
         "trailingComma": "es5"
     },
+    "eslint": {
+        "rules": {
+            "no-console": "error",
+            "import/no-duplicates": "error"
+        }
+    },
     "name": "ms-react-progress-bar",
-    "author": "Shadrack Ankomahene  <ankomaheneshadrack@gmail.com> (https://mistershadrack.com)",
+    "author": "Shadrack Ankomahene <ankomaheneshadrack@gmail.com> (https://mistershadrack.com)",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Ankomahene/ms-react-progress-bar.git"
     },
     "homepage": "https://ankomahene.github.io/ms_react-progress-bar/",
+    "bugs": {
+        "url": "https://github.com/Ankomahene/ms-react-progress-bar/issues"
+    },
     "keywords": [
         "react",
         "progress",
@@ -68,6 +79,8 @@
     ],
     "devDependencies": {
         "@size-limit/preset-small-lib": "^7.0.8",
+        "@testing-library/jest-dom": "^5.16.3",
+        "@testing-library/react": "^12.1.4",
         "@types/react": "^17.0.40",
         "@types/react-dom": "^17.0.13",
         "autoprefixer": "^10.4.2",
@@ -85,5 +98,8 @@
         "tsdx": "^0.14.1",
         "tslib": "^2.3.1",
         "typescript": "^3.9.10"
+    },
+    "dependencies": {
+        "coveralls": "^3.1.1"
     }
 }

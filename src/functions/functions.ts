@@ -1,19 +1,11 @@
-import {
-  AlignmentType,
-  BackgroundType,
-  IProgressOptions,
-} from '../models/models';
+import { AlignmentType, BackgroundType, IProgressOptions } from '../models/models';
 
 export const getPercentageValue = (value: number, maxValue: number) => {
   return isNaN(value) ? 0 : (value / (isNaN(maxValue) ? 100 : maxValue)) * 100;
 };
 
 export const getLabelAlignment = (alignment: AlignmentType) => {
-  return alignment === 'right'
-    ? 'flex-end'
-    : alignment === 'center'
-    ? alignment
-    : 'flex-start';
+  return alignment === 'right' ? 'flex-end' : alignment === 'center' ? alignment : 'flex-start';
 };
 
 export const getProgressBackgroundStyle = (

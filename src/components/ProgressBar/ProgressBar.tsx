@@ -1,9 +1,6 @@
 import React from 'react';
 import { IProgressBarProps, IProgressOptions } from '../../models/models';
-import {
-  getDefaultOptions,
-  getPercentageValue,
-} from '../../functions/functions';
+import { getDefaultOptions, getPercentageValue } from '../../functions/functions';
 import { getProgressBarStyles } from '../../functions/styles';
 
 export const ProgressBar = ({ value, options }: IProgressBarProps) => {
@@ -24,13 +21,9 @@ export const ProgressBar = ({ value, options }: IProgressBarProps) => {
           <div className="ms-progress-label_97NH7CX" style={labelStyles}>
             {!!customLabel
               ? customLabel
-              : `${
-                  isNaN(value) || Number(value) < 0
-                    ? 0
-                    : value > maxValue!
-                    ? maxValue
-                    : value
-                }${showMaxValue ? ` / ${maxValue}` : ''}%`}
+              : `${isNaN(value) || Number(value) < 0 ? 0 : value > maxValue! ? maxValue : value}${
+                  showMaxValue ? ` / ${maxValue}` : ''
+                }%`}
           </div>
         </div>
       </div>

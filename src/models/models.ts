@@ -26,3 +26,9 @@ export interface IProgressBarProps {
   value: number;
   options: IProgressOptions;
 }
+
+export interface ProgressBarStyles {
+  containerStyles: { [key: string]: string | undefined };
+  progressBarStyles: { [key: string]: string | undefined };
+  labelStyles: { [key: string]: string | undefined };
+}
