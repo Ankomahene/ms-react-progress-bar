@@ -27,7 +27,7 @@ jobs:
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v1.1.2
         with:
-          repo-token: ${{ secrets.REPO_TOKEN }}
+          github-token: ${{ secrets.REPO_TOKEN }}
 
       - name: Build
         run: yarn build
