@@ -3,6 +3,7 @@ import {
   getProgressBackgroundStyle,
   getLabelAlignment,
   getDefaultOptions,
+  getPercentageValue,
 } from '../src/functions/functions';
 
 describe('Test Functions', () => {
@@ -24,6 +25,39 @@ describe('Test Functions', () => {
     labelPosition: 'center',
     showMaxValue: false,
   };
+
+  describe('Get Percentage Value', () => {
+    it('should return 0 as default percentage value if value argument is not a number', () => {
+      const percentageValue = getPercentageValue('test' as any, 100);
+      expect(percentageValue).toBe(0);
+    });
+
+    it('should return correct percentage value for maxNumber 100', () => {
+      const percentageValue = getPercentageValue(40, 100);
+      expect(percentageValue).toBe(40);
+    });
+
+    it('should return correct percentage value for maxNumber 200', () => {
+      const percentageValue = getPercentageValue(40, 200);
+      const expectedPercentageValue = (40 / 200) * 100;
+      expect(percentageValue).toBe(expectedPercentageValue);
+      expect(percentageValue).toBe(20);
+    });
+
+    it('should return correct percentage value for maxNumber 50', () => {
+      const percentageValue = getPercentageValue(40, 50);
+      const expectedPercentageValue = (40 / 50) * 100;
+      expect(percentageValue).toBe(expectedPercentageValue);
+      expect(percentageValue).toBe(80);
+    });
+
+    it('should use 100 as default maxValue and calculate correct percentage value if maxValue argument is not a number', () => {
+      const percentageValue = getPercentageValue(40, 'test' as any);
+      const expectedPercentageValue = (40 / 100) * 100;
+      expect(percentageValue).toBe(expectedPercentageValue);
+      expect(percentageValue).toBe(40);
+    });
+  });
 
   describe('Get Label Alignment', () => {
     it('should check label alignment is center', () => {
@@ -68,8 +102,7 @@ describe('Test Functions', () => {
       const backgroundStyle = getProgressBackgroundStyle('striped', '#0000ff');
 
       expect(backgroundStyle).toEqual({
-        backgroundImage:
-          'repeating-linear-gradient( 135deg, #0000ff66, #0000ff66 5px, #0000ff 5px, #0000ff 10px)',
+        backgroundImage: 'repeating-linear-gradient( 135deg, #0000ff66, #0000ff66 5px, #0000ff 5px, #0000ff 10px)',
       });
     });
   });

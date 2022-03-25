@@ -1,10 +1,7 @@
-import { IProgressOptions } from '../models/models';
+import { IProgressOptions, ProgressBarStyles } from '../models/models';
 import { getLabelAlignment, getProgressBackgroundStyle } from './functions';
 
-export const getProgressBarStyles = (
-  progressOptions: IProgressOptions,
-  percentageValue: number
-): { [key: string]: { [key: string]: string | undefined } } => {
+export const getProgressBarStyles = (progressOptions: IProgressOptions, percentageValue: number): ProgressBarStyles => {
   const {
     type,
     height,
@@ -26,22 +23,16 @@ export const getProgressBarStyles = (
     containerStyles: {
       height,
       backgroundColor: containerStyle === 'bg' ? containerColor : 'transparent',
-      border:
-        containerStyle === 'border' ? `2px solid ${containerColor}` : 'none',
+      border: containerStyle === 'border' ? `2px solid ${containerColor}` : 'none',
       borderRadius,
       marginTop: labelPosition === 'top' ? '20px' : '5px',
       marginBottom: labelPosition === 'bottom' ? '20px' : '5px',
     },
     progressBarStyles: {
       ...getProgressBackgroundStyle(type!, barColor!),
-      width:
-        percentageValue <= 0
-          ? '0%'
-          : `${percentageValue > 100 ? 100 : percentageValue}%`,
+      width: percentageValue <= 0 ? '0%' : `${percentageValue > 100 ? 100 : percentageValue}%`,
       borderRadius,
-      animation: stripeAnimation
-        ? `moveBG ${stripeAnimationDuration} linear infinite`
-        : '',
+      animation: stripeAnimation ? `moveBG ${stripeAnimationDuration} linear infinite` : '',
     },
     labelStyles: {
       color: labelColor,
